@@ -23,6 +23,8 @@ $(function () {
             $.ajax({
                 url: "https://send-contact-form.herokuapp.com/",
                 type: "POST",
+                contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+                dataType: 'text',
                 data: {
                     name: name,
                     phone: phone,
@@ -45,7 +47,7 @@ $(function () {
                     //clear all fields
                     $("#contactForm").trigger("reset");
                 },
-                error: function () {
+                error: function (e) {
                     // Fail message
                     $("#success").html("<div class='alert alert-danger'>");
                     $("#success > .alert-danger")
