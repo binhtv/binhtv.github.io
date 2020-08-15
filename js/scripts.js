@@ -66,8 +66,11 @@
     });
   
     $('#highfive').on('click', (e) => {
-      ga('send', 'event', 'Click on Button','click','High Five');
-      //alert('¤ High Five ¤');
+      gtag('event', 'Click', {
+        eventCategory: 'Button Click',
+        eventLabel: 'High Five Button',
+      });
+      alert('¤ High Five ¤');
     });
   })(jQuery); // End of use strict
   
