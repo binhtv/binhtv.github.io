@@ -66,12 +66,8 @@
     });
   
     $('#highfive').on('click', (e) => {
-      ga('send', 'event', {
-        eventCategory: 'Click on Button',
-        eventAction: 'click',
-        eventLabel: 'High Five'
-      });
-      alert('¤ High Five ¤');
+      ga('send', 'event', 'Click on Button','click','High Five');
+      //alert('¤ High Five ¤');
     });
   })(jQuery); // End of use strict
   
