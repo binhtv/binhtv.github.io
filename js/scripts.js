@@ -67,8 +67,8 @@
   
     $('#highfive').on('click', (e) => {
       gtag('event', 'Click', {
-        eventCategory: 'Button Click',
-        eventLabel: 'High Five Button',
+        'event_category': 'Button Click',
+        'event_label': 'High Five Button',
       });
       alert('¤ High Five ¤');
     });
